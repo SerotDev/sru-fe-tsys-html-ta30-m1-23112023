@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&display=swap');
+
+body {
+  margin: 0px;
+  background-color: white;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0666a3;
+}
+
+#container {
+  display: flex;
+  width: 100%;
+  min-height: 550px;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #0666a3;
+}
+
+#gameboy {
+  position: relative;
+  display: block;
+  width: 300px;
+  height: 500px;
+  background: #dadce0;
+  border-radius: 10px 10px 50px 10px;
+  border-right: 4px solid gray;
+  border-bottom: 4px solid gray;
+  box-shadow: 4px 4px 15px -3px black, inset -1px -1px 10px 0px gray;
+}
+
+#top-part {
+  display: grid;
+  width: 100%;
+  height: 30px;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 5fr 1fr;
+}
+
+#top-part > div:nth-child(1) {
+  height: 100%;
+  border-bottom: 4px solid;
+  border-right: 4px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(150deg, rgba(0, 0, 0, 0.6), #cecece 70%, #cecece);
+  box-sizing: border-box;
+  box-shadow: inset -2px -2px 1px -1px gray;
+}
+
+#top-part > div:nth-child(2) {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 100%;
+  padding-left: 5px;
+  border-bottom: 4px solid #cecece;
+  box-sizing: border-box;
+  box-shadow: inset -2px -2px 1px -1px gray;
+}
+
+#top-part > div:nth-child(3) {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 100%;
+  padding-left: 5px;
+  border-bottom: 4px solid;
+  border-left: 4px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(210deg, rgba(0, 0, 0, 0.6), #cecece 70%, #cecece);
+  box-sizing: border-box;
+  box-shadow: inset 0px -2px 1px -1px gray;
+}
+
+#on-off {
+  padding-bottom: 2px;
+  color: #dadce0;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: #cecece;
+  border-radius: 30px;
+  box-sizing: border-box;
+  box-shadow: inset -1px -1px 10px 0px #c0c0c0, inset 1px 1px 1px #454545;
+}
+
+.top-mark{
+  position: absolute;
+  width: 4px;
+  height: 6px;
+  top: 0;
+  background-color: #b5b5b5;
+  box-shadow: -1px 0px 1px 0px gray, inset 0px 2px 2px -1px gray;
+}
+
+#tm-1 {
+  left: 15px;
+}
+
+#tm-2 {
+  left: 25px;
+}
+
+#tm-3 {
+  left: 35px;
+}
+
+#on-off > span {
+  padding: 3px;
+  text-shadow: 1px 1px 1px gray;
+}
+
+#screen-frame {
+  display: grid;
+  grid-template-rows: 1fr 7fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  height: 180px;
+  background: gray;
+  border-radius: 10px 10px 50px 10px;
+  box-shadow: 0px 0px 2px #454545, inset 0px 0px 2px #454545;
+}
+
+#sf-top-part {
+  position: relative;
+  grid-column: 1/4;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 8px;
+  font-weight: bold;
+  color: white;
+}
+
+#sf-lines{
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100%;
+  height: 3px;
+  border-top: 2px solid purple;
+  border-bottom: 2px solid blue;
+}
+
+#sf-text {
+  position: absolute;
+  background: gray;
+  padding-left: 5px;
+  padding-right: 5px;
+  left: 25%;
+}
+
+#battery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#sf-battery {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  margin: 5px;
+  margin-right: 15px;
+  background-color: #333333;
+  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
+
+#sf-battery:hover {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  margin: 5px;
+  margin-right: 15px;
+  background-color: #920909;
+  box-shadow: 0px 0px 10px red;
+}
+
+#sf-battery-text {
+  font-size: 7px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 40px;
+}
+
+#screen {
+  position: relative;
+  background-image: url("../img/super-mario-land.gif");
+  background-size: cover;
+  background-position: center;
+}
+
+#overlay-effect {
+  width: 100%;
+  height: 100%;
+  background-color: #34a85365;
+  box-shadow: 0px 0px 2px #454545, inset 0px 0px 8px 0px #216233;
+}
+
+#logo {
+  padding-top: 5px;
+  padding-left: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  color: blue;
+}
+
+#logo > #logo-name {
+  font-family: 'Comic Neue', cursive;
+  font-size: 20px;
+}
+
+#logo > #logo-tm {
+  font-size: 8px;
+}
+
+#controls {
+  position: relative;
+  width: 100%;
+  height: 242px;
+}
+
+#arrows {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 40px;
+  left: 25px;
+  background-color: lightgray;
+}
+
+#a-b {
+  position: absolute;
+  width: 100px;
+  height: 80px;
+  top: 40px;
+  right: 25px;
+  transform: rotate(335deg);
+  background-color: lightgray;
+}
+
+#menu {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  bottom: 50px;
+  left: 90px;
+  background-color: lightgray;
+}
+
+#speaker-bars {
+  position: absolute;
+  width: 90px;
+  height: 55px;
+  bottom: 20px;
+  right: 10px;
+  transform: rotate(335deg);
+  background-color: lightgray;
+}
+
+
+
+
+
+
+
+
+
+
+#bottom-part {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 100%;
+  bottom: 0;
+}
+
+#phones {
+  padding-bottom: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-shadow: 1px 1px 1px gray;
+  color: #dadce0;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: #cecece;
+  border-radius: 30px;
+  box-sizing: border-box;
+  box-shadow: inset -1px -1px 10px 0px #c0c0c0, inset 1px 1px 1px #454545;
+  margin-left:100px;
+}
+
+.bottom-mark{
+  position: absolute;
+  width: 4px;
+  height: 7px;
+  bottom: 0;
+  background-color: #b5b5b5;
+  box-shadow: -1px 0px 1px 0px gray, inset 0px -2px 2px -1px gray;
+}
+
+#bm-1 {
+  left: 130px;
+}
+
+#bm-2 {
+  left: 140px;
+}
+
+#bm-3 {
+  left: 150px;
+}
