@@ -227,21 +227,75 @@ body {
 
 #arrows {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80px;
   height: 80px;
   top: 40px;
   left: 25px;
-  background-color: lightgray;
+  border-radius: 40px;
+  background: linear-gradient(#e1e3e6, #d4d6d8);
+  box-shadow: inset 1px 1px 10px #cbcdcf;
+}
+
+#arrows-horizontal {
+  height: 30%;
+  width: 80%;
+  background-color: #333333;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 0px rgb(0, 0, 0), inset 1px 2px 3px -1px gray;
+}
+
+#arrows-vertical {
+  position: absolute;
+  height: 80%;
+  width: 30%;
+  background-color: #333333;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 0px rgb(0, 0, 0), inset 1px 2px 3px -1px gray;
+}
+
+#clear-arrow-center{
+  position: absolute;
+  height: 30%;
+  width: 33%;
+  margin-left: 2px;
+  background-color: #333333;
+  border-radius: 3px;
+}
+
+#arrows-center {
+  position: absolute;
+  height: 30%;
+  width: 30%;
+  margin-left: 1px;
+  border-radius: 50%;
+  background-color: #393939;
+  box-shadow: inset 0px 0px 3px black;
 }
 
 #a-b {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100px;
-  height: 80px;
-  top: 40px;
+  height: 50px;
+  top: 50px;
   right: 25px;
   transform: rotate(335deg);
-  background-color: lightgray;
+  border-radius: 50px;
+  background: linear-gradient(#e1e3e6, #d4d6d8);
+  box-shadow: inset 1px 1px 10px #cbcdcf;
+}
+
+#a-b > div:nth-child(-n + 2){
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin: 7px;
+  background-color: purple;
 }
 
 #menu {
@@ -262,12 +316,6 @@ body {
   transform: rotate(335deg);
   background-color: lightgray;
 }
-
-
-
-
-
-
 
 
 
