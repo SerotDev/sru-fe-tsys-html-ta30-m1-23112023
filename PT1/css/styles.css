@@ -199,7 +199,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #34a85365;
-  box-shadow: 0px 0px 2px #454545, inset 0px 0px 8px 0px #216233;
+  box-shadow: 0px 0px 2px #454545, inset 0px 0px 8px 0px #436221;
 }
 
 #logo {
@@ -280,8 +280,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 50px;
+  width: 80px;
+  height: 40px;
   top: 50px;
   right: 25px;
   transform: rotate(335deg);
@@ -290,35 +290,81 @@ body {
   box-shadow: inset 1px 1px 10px #cbcdcf;
 }
 
-#a-b > div:nth-child(-n + 2){
+#a-b > div{
   width: 30px;
-  height: 30px;
+  height: 32px;
   border-radius: 15px;
-  margin: 7px;
   background-color: purple;
+  box-shadow: inset 1px 2px 3px -1px #d494d4, inset -1px -2px 3px -1px black;
+}
+
+#a-b > div:nth-child(1){
+  margin-right: 5px;
+}
+#a-b > div:nth-child(2){
+  margin-left: 5px;
+}
+
+#a-b > div > div{
+  position: absolute;
+  font-weight: bold;
+  font-size: 10px;
+  color: blue;
+  margin-top: 37px;
+  margin-left: 12px;
 }
 
 #menu {
   position: absolute;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
   width: 100px;
   height: 50px;
   bottom: 50px;
   left: 90px;
-  background-color: lightgray;
+  font-weight: bold;
+  font-size: 9px;
+  color: blue;
+}
+
+.menu-btn-box {
+  transform: rotate(335deg);
+}
+
+.menu-btn {
+    width: 32px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: gray;
+    box-shadow: inset 1px 2px 3px -1px rgb(212, 212, 212), inset -1px -2px 3px -1px black;
+}
+
+.menu-btn-box > div:nth-last-child(1) {
+  margin-top: 2px;
 }
 
 #speaker-bars {
   position: absolute;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
   width: 90px;
   height: 55px;
   bottom: 20px;
   right: 10px;
   transform: rotate(335deg);
-  background-color: lightgray;
 }
 
-
-
+#speaker-bars > div {
+  width: 6px;
+  border-radius: 3px;
+  background-color: #cecece;
+  box-shadow: inset 1px -2px 2px -1px gray;
+}
 
 #bottom-part {
   position: absolute;
